@@ -1,0 +1,44 @@
+
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$rose-palette,
+      tertiary: mat.$red-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
+  --s: 32px; /* control the size*/
+  --c1: var(--mat-sys-primary-container);
+  --c2: rgba(0,0,0,.4);
+  
+  --_g: radial-gradient(25% 25% at 25% 25%,var(--c1) 99%,#0000 101%);
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-primary-container);
+  color: black;
+  font: var(--mat-sys-body-medium);
+
+  .magicpattern{
+  background:
+   var(--_g) var(--s) var(--s)/calc(2*var(--s)) calc(2*var(--s)),
+   var(--_g) 0 0/calc(2*var(--s)) calc(2*var(--s)),
+   radial-gradient(50% 50%,var(--c2) 98%,#0000) 0 0/var(--s) var(--s),
+   repeating-conic-gradient(var(--c2) 0 25%,var(--c1) 0 50%) 
+     calc(.5*var(--s)) 0/calc(2*var(--s)) var(--s);
+
+  }
+}

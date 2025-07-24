@@ -1,0 +1,22 @@
+<div class="navigation">
+    <div class="top-nav">
+        <button matMiniFab (click)="toggleSideNav()">
+                <mat-icon fontIcon="arrow_back_ios"></mat-icon>
+        </button>
+        <button matMiniFab >
+                <mat-icon fontIcon="home"></mat-icon>
+        </button>
+    </div>
+    <div class="extended-left-nav" *ngIf="showSideNav">
+        <button matMiniFab >
+                    <mat-icon fontIcon="book_2"></mat-icon>
+            </button>
+        <button matMiniFab >
+                    <mat-icon fontIcon="dashboard"></mat-icon>
+        </button>
+        <button matMiniFab >
+                <mat-icon fontIcon="chat_bubble"></mat-icon>
+        </button>
+    </div>
+</div>
+

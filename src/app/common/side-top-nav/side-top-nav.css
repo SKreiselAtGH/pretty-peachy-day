@@ -1,0 +1,33 @@
+.navigation {
+    z-index: 5;
+}
+.top-nav {
+    background-color: #5d4e51;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 75px;
+    border-radius: 0 20px 20px 0;
+}
+.extended-left-nav {
+    background-color: #5d4e51;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 150px;
+    width: 75px;
+    border-radius: 0 0 20px 20px;
+}
+mat-icon {
+    color: white;
+}
+
+button {
+    background-color: #968387;
+    display: flex;
+    justify-content: center;
+}
